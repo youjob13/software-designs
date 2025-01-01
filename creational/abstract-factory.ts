@@ -1,3 +1,7 @@
+/**
+ * Useful when we want to manipulate with different objects that have similar signature
+ */
+
 abstract class Vehicle {
   name: string;
   maxSpeed: number;

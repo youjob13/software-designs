@@ -1,3 +1,7 @@
+/**
+ * Helpful when we need to extend or narrow objects
+ */
+
 abstract class Clonnable {
   clone() {
     throw new Error("Method is not implemented");
