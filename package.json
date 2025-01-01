@@ -1,0 +1,12 @@
+{
+  "name": "patterns",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start:abstract-factory": "npx tsc creational/abstract-factory.ts && node creational/abstract-factory.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
