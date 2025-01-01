@@ -65,7 +65,7 @@ class VolkswagenFactory extends CarsFactory {
   }
 }
 
-class App {
+export class App {
   start() {
     const carsFactories = [new ToyotaFactory(), new VolkswagenFactory()];
 
