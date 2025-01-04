@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "start:abstract-factory": "npx tsc creational/abstract-factory.ts && node creational/abstract-factory.js",
-    "start:prototype": "npx tsc creational/prototype.ts  && node creational/prototype.js"
+    "start:prototype": "npx tsc creational/prototype.ts  && node creational/prototype.js",
+    "start:builder": "npx tsc creational/builder.ts  && node creational/builder.js"
   },
   "keywords": [],
   "author": "",
