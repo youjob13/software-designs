@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2024",
+    "target": "ES5",
     "module": "CommonJS",
     "baseUrl": ".",
     "paths": {
@@ -13,7 +13,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "types": ["vitest/globals"],
+    "types": ["node"],
     "downlevelIteration": true,
     "lib": ["es2020", "dom"]
   },

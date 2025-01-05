@@ -3,8 +3,8 @@
  */
 
 abstract class Vehicle {
-  name: string;
-  maxSpeed: number;
+  name!: string;
+  maxSpeed!: number;
   go() {
     throw new Error("Method is not implemented");
   }
@@ -14,7 +14,7 @@ abstract class Vehicle {
 }
 
 abstract class CarsFactory {
-  protected names: string[];
+  protected names!: string[];
   createCar(maxSpeed: number): Vehicle {
     throw new Error("Method is not implemented");
   }

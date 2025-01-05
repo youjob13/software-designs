@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start:abstract-factory": "npx tsc src/creational/abstract-factory.ts && node src/creational/abstract-factory.js",
-    "start:prototype": "npx tsc src/creational/prototype.ts  && node src/creational/prototype.js",
-    "start:builder": "npx tsc src/creational/builder.ts  && node src/creational/builder.js"
+    "build": "npx tsc -b tsconfig.json",
+    "prestart": "npm run build",
+    "start:abstract-factory": "node src/creational/abstract-factory.js",
+    "start:prototype": "node src/creational/prototype.js",
+    "start:builder": "node src/creational/builder.js"
   },
   "keywords": [],
   "author": "",
