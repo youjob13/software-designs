@@ -6,9 +6,10 @@
     "build": "npx tsc -b tsconfig.json",
     "prestart": "npm run build",
     "start": "node",
-    "start:abstract-factory": "npm run start -- dist/abstract-factory.js",
-    "start:prototype": "npm run start -- dist/prototype.js",
-    "start:builder": "npm run start -- dist/builder.js"
+    "start:abstract-factory": "npm run start -- dist/creational/abstract-factory.js",
+    "start:prototype": "npm run start -- dist/creational/prototype.js",
+    "start:builder": "npm run start -- dist/creational/builder.js",
+    "start:adapter": "npm run start -- dist/structural/adapter.js"
   },
   "keywords": ["Design patterns", "creational patterns", "behavioral patterns", "structural patterns"],
   "author": "Danila Rodionov",
