@@ -13,41 +13,41 @@
  */
 
 class AnimalBuilder {
-  private parameters: Map<string, (target: Animal) => void> = new Map();
+  private parameters: Set<(target: Animal) => void> = new Set();
 
   getParams() {
     return this.parameters;
   }
 
   constructor(private name: string) {
-    this.parameters.set("name", (target) => (target.name = name));
+    this.parameters.add((target) => (target.name = name));
   }
 
   withVoice(voice: string) {
-    this.parameters.set("voice", (target) => (target.voice = voice));
+    this.parameters.add((target) => (target.voice = voice));
     return this;
   }
 
-  // withPossibilityToFly() {
-  //   this.parameters.set("couldFly", true);
-  //   this.withWings();
-  //   return this;
-  // }
+  withPossibilityToFly() {
+    this.parameters.add((target) => (target.couldFly = true));
+    this.withWings();
+    return this;
+  }
 
-  // withPossibilityToSwim() {
-  //   this.parameters.set("couldSwim", true);
-  //   return this;
-  // }
+  withPossibilityToSwim() {
+    this.parameters.add((target) => (target.couldSwim = true));
+    return this;
+  }
 
-  // withPaws() {
-  //   this.parameters.set("hasPaws", true);
-  //   return this;
-  // }
+  withPaws() {
+    this.parameters.add((target) => (target.hasPaws = true));
+    return this;
+  }
 
-  // withWings() {
-  //   this.parameters.set("hasWings", true);
-  //   return this;
-  // }
+  withWings() {
+    this.parameters.add((target) => (target.hasWings = true));
+    return this;
+  }
 
   build() {
     return new Animal(this);
@@ -56,10 +56,10 @@ class AnimalBuilder {
 
 class Animal {
   private _voice!: string;
-  private couldFly = false;
-  private couldSwim = false;
-  private hasPaws = false;
-  private hasWings = false;
+  private _couldFly = false;
+  private _couldSwim = false;
+  private _hasPaws = false;
+  private _hasWings = false;
   private _name!: string;
 
   set name(name: string) {
@@ -78,8 +78,40 @@ class Animal {
     return this._voice;
   }
 
+  set couldFly(value: boolean) {
+    this._couldFly = value;
+  }
+
+  get couldFly() {
+    return this._couldFly;
+  }
+
+  set couldSwim(value: boolean) {
+    this._couldSwim = value;
+  }
+
+  get couldSwim() {
+    return this._couldSwim;
+  }
+
+  set hasPaws(value: boolean) {
+    this._hasPaws = value;
+  }
+
+  get hasPaws() {
+    return this._hasPaws;
+  }
+
+  set hasWings(value: boolean) {
+    this._hasWings = value;
+  }
+
+  get hasWings() {
+    return this._hasWings;
+  }
+
   constructor(builder: AnimalBuilder) {
-    for (const [key, value] of Array.from(builder.getParams())) {
+    for (const value of Array.from(builder.getParams())) {
       value(this);
     }
   }
@@ -135,19 +167,19 @@ class Zoo {
 const zoo = new Zoo();
 
 const henBuilder = new AnimalBuilder("Hen")
-  // .withPaws()
-  // .withPossibilityToFly()
+  .withPaws()
+  .withPossibilityToFly()
   .withVoice("Co-co-co");
 
 const penguinBuilder = new AnimalBuilder("Penguin")
-  // .withPaws()
-  // .withPossibilityToSwim()
+  .withPaws()
+  .withPossibilityToSwim()
   .withVoice("...");
 
 const duckBuilder = new AnimalBuilder("Duck")
-  // .withPaws()
-  // .withPossibilityToSwim()
-  // .withPossibilityToFly()
+  .withPaws()
+  .withPossibilityToSwim()
+  .withPossibilityToFly()
   .withVoice("Krya-krya");
 
 zoo.set(henBuilder).set(penguinBuilder).set(duckBuilder).start();
