@@ -1,7 +1,7 @@
 {
   "name": "patterns",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "build": "npx tsc -b tsconfig.json",
     "prestart": "npm run build",
@@ -9,8 +9,7 @@
     "start:prototype": "node src/creational/prototype.js",
     "start:builder": "node src/creational/builder.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "keywords": ["Design patterns", "creational patterns", "behavioral patterns", "structural patterns"],
+  "author": "Danila Rodionov",
+  "license": "ISC"
 }
