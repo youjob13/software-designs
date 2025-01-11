@@ -3,15 +3,25 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "npx tsc -b tsconfig.json",
+    "build": "tsc -b tsconfig.json",
     "prestart": "npm run build",
     "start": "node",
     "start:abstract-factory": "npm run start -- dist/creational/abstract-factory.js",
     "start:prototype": "npm run start -- dist/creational/prototype.js",
     "start:builder": "npm run start -- dist/creational/builder.js",
-    "start:adapter": "npm run start -- dist/structural/adapter.js"
+    "start:adapter": "npm run start -- dist/structural/adapter.js",
+    "start:facade": "npm run start -- dist/structural/facade.js"
   },
-  "keywords": ["Design patterns", "creational patterns", "behavioral patterns", "structural patterns"],
+  "keywords": [
+    "Design patterns",
+    "creational patterns",
+    "behavioral patterns",
+    "structural patterns"
+  ],
   "author": "Danila Rodionov",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "typescript": "^5.7.3"
+  }
 }
