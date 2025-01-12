@@ -163,5 +163,5 @@ class App {
   }
 }
 
-const app = new App();
+export const app = new App();
 app.start();

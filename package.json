@@ -10,7 +10,8 @@
     "start:prototype": "npm run start -- dist/creational/prototype.js",
     "start:builder": "npm run start -- dist/creational/builder.js",
     "start:adapter": "npm run start -- dist/structural/adapter.js",
-    "start:facade": "npm run start -- dist/structural/facade.js"
+    "start:facade": "npm run start -- dist/structural/facade.js",
+    "start:decorator": "npm run start -- dist/structural/decorator.js"
   },
   "keywords": [
     "Design patterns",
