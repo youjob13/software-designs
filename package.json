@@ -12,13 +12,16 @@
     "start:adapter": "npm run start -- dist/structural/adapter.js",
     "start:facade": "npm run start -- dist/structural/facade.js",
     "start:decorator": "npm run start -- dist/structural/decorator.js",
-    "start:srp": "npm run start -- dist/OOP/SOLID/single-responsibility.js"
+    "start:srp": "npm run start -- dist/OOP/SOLID/single-responsibility.js",
+    "start:ocp": "npm run start -- dist/OOP/SOLID/open-closed.js"
   },
   "keywords": [
     "Design patterns",
     "creational patterns",
     "behavioral patterns",
-    "structural patterns"
+    "structural patterns",
+    "OOP",
+    "SOLID"
   ],
   "author": "Danila Rodionov",
   "license": "ISC",
