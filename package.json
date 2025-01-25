@@ -11,7 +11,8 @@
     "start:builder": "npm run start -- dist/creational/builder.js",
     "start:adapter": "npm run start -- dist/structural/adapter.js",
     "start:facade": "npm run start -- dist/structural/facade.js",
-    "start:decorator": "npm run start -- dist/structural/decorator.js"
+    "start:decorator": "npm run start -- dist/structural/decorator.js",
+    "start:srp": "npm run start -- dist/OOP/SOLID/single-responsibility.js"
   },
   "keywords": [
     "Design patterns",
