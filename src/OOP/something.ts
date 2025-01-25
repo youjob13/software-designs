@@ -8,3 +8,7 @@
  * How much do your components depend on each other? How easy is it to change one component without modifying another one?
  * (e.g. The Smartphone class can work with the Calculator class without knowing any details how the Calculator class is implemented)
  */
+
+/**
+ * #2. Inheritance is not for code reuse, not for sharing behavior. Use composition either than inheritance to share behavior (e.g. Decorator pattern)
+ */
