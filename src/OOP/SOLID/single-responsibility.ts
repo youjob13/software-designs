@@ -9,6 +9,12 @@
  * src\OOP\something.ts (see #1)
  */
 
+/**
+ * Tips.
+ * - Classes with SRP are easier to reuse.
+ * - Classes with SRP are easier to test.
+ */
+
 /** <-- Bad example --> */
 interface IRecord {
   data: {
