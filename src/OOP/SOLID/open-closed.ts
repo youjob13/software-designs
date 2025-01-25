@@ -44,7 +44,7 @@ console.log(`[Bad example]: `, newEmployee3.getTitle());
 
 /** <-- Bad example ==/> */
 
-/** <-- Bad example ==> */
+/** <-- Good example ==> */
 
 /**
  * We should create a new class for every title.
@@ -92,4 +92,4 @@ console.log(`[Good example]: `, newProductOwner.getTitle());
 const newQaTester = new QaTester("Gloria");
 console.log(`[Good example]: `, newQaTester.getTitle());
 
-/** <-- Bad example ==/> */
+/** <-- Good example ==/> */
