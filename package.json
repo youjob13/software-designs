@@ -14,7 +14,8 @@
     "start:decorator": "npm run start -- dist/structural/decorator.js",
     "start:srp": "npm run start -- dist/OOP/SOLID/single-responsibility.js",
     "start:ocp": "npm run start -- dist/OOP/SOLID/open-closed.js",
-    "start:lsp": "npm run start -- dist/OOP/SOLID/liskov-substitution.js"
+    "start:lsp": "npm run start -- dist/OOP/SOLID/liskov-substitution.js",
+    "start:isp": "npm run start -- dist/OOP/SOLID/interface-segregation.js"
   },
   "keywords": [
     "Design patterns",
