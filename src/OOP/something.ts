@@ -23,3 +23,6 @@
  * A type T is contravariant if having S <: P, then T<P> <: T<S>.
  * Input is safe.
  */
+
+// When inheritance is needed? Benefits inheritance over composition and vise versa.
+// When it's better to use inheritance rather than composition and vise versa.
