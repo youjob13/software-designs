@@ -16,7 +16,9 @@
     "start:ocp": "npm run start -- dist/OOP/SOLID/open-closed.js",
     "start:lsp": "npm run start -- dist/OOP/SOLID/liskov-substitution.js",
     "start:isp": "npm run start -- dist/OOP/SOLID/interface-segregation.js",
-    "start:dip": "npm run start -- dist/OOP/SOLID/dependency-inversion.js"
+    "start:dip": "npm run start -- dist/OOP/SOLID/dependency-inversion.js",
+    "start:duck-typing": "npm run start -- dist/OOP/duck-typing.js",
+    "start:lod": "npm run start -- dist/OOP/loose-coupling-and-high-cohesion.js"
   },
   "keywords": [
     "Design patterns",

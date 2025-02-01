@@ -6,7 +6,7 @@
 /**
  * If the code violates this principle - the code becomes tightly coupled. It becomes difficult to modify and support.
  * #Tightly Coupled means - if you need to change something in one place you will need to change something else in another place
- * src\OOP\something.ts (see #1)
+ * (see src\OOP\loose-coupling-and-high-cohesion.ts)
  */
 
 /**
