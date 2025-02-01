@@ -28,6 +28,9 @@
     "OOP",
     "SOLID"
   ],
+  "repository": {
+    "url": "https://github.com/youjob13/software-designs.git"
+  },
   "author": "Danila Rodionov",
   "license": "ISC",
   "devDependencies": {
