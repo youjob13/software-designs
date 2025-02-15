@@ -2,6 +2,8 @@ import { describe, it } from "node:test";
 import { PrefixTree } from "./prefix-tree";
 import assert from "node:assert";
 
+import * as TestHelpers from "../test.helpers";
+
 function badAutocomplete(source: string[], query: string) {
   const results: string[] = [];
   for (const word of source) {
@@ -33,12 +35,12 @@ describe("Autocomplete", () => {
     const {
       duration: trieAutocompleteDuration,
       results: trieAutocompleteResults,
-    } = measureFnExecution(trie.autocomplete.bind(trie), query);
+    } = TestHelpers.measureFnExecution(trie.autocomplete.bind(trie), query);
 
     const {
       duration: badAutocompleteDuration,
       results: badAutocompleteResults,
-    } = measureFnExecution(badAutocomplete, source, query);
+    } = TestHelpers.measureFnExecution(badAutocomplete, source, query);
 
     console.info("[Trie]: ", trieAutocompleteDuration);
     console.info("[Bad Autocomplete]: ", badAutocompleteDuration);
@@ -47,10 +49,3 @@ describe("Autocomplete", () => {
     assert.ok(badAutocompleteDuration > trieAutocompleteDuration);
   });
 });
-
-function measureFnExecution(fn: (...args: any[]) => any, ...args: any[]) {
-  const fnStart = performance.now();
-  const trieAutocompleteResults = fn(...args);
-  const fnDuration = performance.now() - fnStart;
-  return { duration: fnDuration, results: trieAutocompleteResults };
-}

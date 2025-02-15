@@ -23,7 +23,9 @@
     "start:lod": "npm run start -- dist/OOP/loose-coupling-and-high-cohesion.js",
     "start:binary-search-tree": "npm run start -- dist/data-structures/binary-tree.js",
     "start:prefix-tree": "npm run start -- dist/data-structures/prefix-tree.js",
-    "test:prefix-tree": "npm run test -- dist/data-structures/prefix-tree.spec.js"
+    "test:prefix-tree": "npm run test -- dist/data-structures/prefix-tree.spec.js",
+    "start:binary-search": "npm run start -- dist/algorithms/binary-search.js",
+    "test:binary-search": "npm run test -- dist/algorithms/binary-search.spec.js"
   },
   "keywords": [
     "Design patterns",
