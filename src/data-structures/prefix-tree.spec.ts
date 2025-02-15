@@ -28,13 +28,17 @@ describe("Autocomplete", () => {
   const trie = new PrefixTree(source);
 
   it("PrefixTree autocomplete should be much faster than badAutocomplete fn when the number of matched words is small", () => {
-    const trieAutocompleteStart = performance.now();
-    const trieAutocompleteResults = trie.autocomplete("c");
-    const trieAutocompleteDuration = performance.now() - trieAutocompleteStart;
+    const query = "c";
 
-    const badAutocompleteStart = performance.now();
-    const badAutocompleteResults = badAutocomplete(source, "c");
-    const badAutocompleteDuration = performance.now() - badAutocompleteStart;
+    const {
+      duration: trieAutocompleteDuration,
+      results: trieAutocompleteResults,
+    } = measureFnExecution(trie.autocomplete.bind(trie), query);
+
+    const {
+      duration: badAutocompleteDuration,
+      results: badAutocompleteResults,
+    } = measureFnExecution(badAutocomplete, source, query);
 
     console.info("[Trie]: ", trieAutocompleteDuration);
     console.info("[Bad Autocomplete]: ", badAutocompleteDuration);
@@ -43,3 +47,10 @@ describe("Autocomplete", () => {
     assert.ok(badAutocompleteDuration > trieAutocompleteDuration);
   });
 });
+
+function measureFnExecution(fn: (...args: any[]) => any, ...args: any[]) {
+  const fnStart = performance.now();
+  const trieAutocompleteResults = fn(...args);
+  const fnDuration = performance.now() - fnStart;
+  return { duration: fnDuration, results: trieAutocompleteResults };
+}
