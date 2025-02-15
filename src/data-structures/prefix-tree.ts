@@ -78,19 +78,19 @@ export class PrefixTree {
 
   private autocompleteHelper(root: TrieNode, query: string): string[] {
     const results: string[] = [];
+    const queue: [TrieNode, string][] = [[root, query]]; // Store (node, word) pairs
 
-    if (root.isEnd) {
-      results.push(query);
-    }
+    while (queue.length > 0) {
+      const [node, word] = queue.shift()!; // Dequeue
 
-    if (!Object.keys(root.children)) {
-      return results;
-    }
+      if (node.isEnd) {
+        results.push(word);
+      }
 
-    for (const child in root.children) {
-      results.push(
-        ...this.autocompleteHelper(root.children[child], query + child)
-      );
+      // Enqueue all children (iterative approach)
+      for (const child in node.children) {
+        queue.push([node.children[child], word + child]);
+      }
     }
 
     return results;
@@ -130,10 +130,3 @@ export class PrefixTree {
     return;
   }
 }
-
-const trie = new PrefixTree(["java", "javascript", "python"]);
-trie.insert("c++").insert("kotlin");
-console.log(trie.autocomplete("ja"));
-console.log(trie.autocomplete("c"));
-console.log(trie.find("c++"));
-console.log(trie.find("ci+"));

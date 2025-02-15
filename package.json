@@ -6,6 +6,8 @@
     "build": "tsc -b tsconfig.json",
     "prestart": "npm run build",
     "start": "node",
+    "pretest": "npm run build",
+    "test": "node --test",
     "start:abstract-factory": "npm run start -- dist/OOP/patterns/creational/abstract-factory.js",
     "start:prototype": "npm run start -- dist/OOP/patterns/creational/prototype.js",
     "start:builder": "npm run start -- dist/OOP/patterns/creational/builder.js",
@@ -20,7 +22,8 @@
     "start:duck-typing": "npm run start -- dist/OOP/duck-typing.js",
     "start:lod": "npm run start -- dist/OOP/loose-coupling-and-high-cohesion.js",
     "start:binary-search-tree": "npm run start -- dist/data-structures/binary-tree.js",
-    "start:prefix-tree": "npm run start -- dist/data-structures/prefix-tree.js"
+    "start:prefix-tree": "npm run start -- dist/data-structures/prefix-tree.js",
+    "test:prefix-tree": "npm run test -- dist/data-structures/prefix-tree.spec.js"
   },
   "keywords": [
     "Design patterns",
