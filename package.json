@@ -25,7 +25,8 @@
     "start:prefix-tree": "npm run start -- dist/data-structures/prefix-tree.js",
     "test:prefix-tree": "npm run test -- dist/data-structures/prefix-tree.spec.js",
     "start:binary-search": "npm run start -- dist/algorithms/binary-search.js",
-    "test:binary-search": "npm run test -- dist/algorithms/binary-search.spec.js"
+    "test:binary-search": "npm run test -- dist/algorithms/binary-search.spec.js",
+    "start:quick-sort": "npm run start -- dist/algorithms/quick-sort.js"
   },
   "keywords": [
     "Design patterns",
