@@ -21,7 +21,7 @@
     "start:dip": "npm run start -- dist/OOP/SOLID/dependency-inversion.js",
     "start:duck-typing": "npm run start -- dist/OOP/duck-typing.js",
     "start:lod": "npm run start -- dist/OOP/loose-coupling-and-high-cohesion.js",
-    "start:binary-search-tree": "npm run start -- dist/data-structures/binary-tree.js",
+    "start:bst": "npm run start -- dist/data-structures/binary-tree.js",
     "start:prefix-tree": "npm run start -- dist/data-structures/prefix-tree.js",
     "test:prefix-tree": "npm run test -- dist/data-structures/prefix-tree.spec.js",
     "start:binary-search": "npm run start -- dist/algorithms/binary-search.js",
