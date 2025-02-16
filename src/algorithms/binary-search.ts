@@ -1,4 +1,24 @@
 /**
+ * Binary Search Algorithm is a searching algorithm used in a sorted array by repeatedly dividing the search interval in half.
+ * The idea of binary search is to use the information that the array is sorted and reduce the time complexity to O(log N).
+ *
+ * Time Complexity.
+ *
+ *  ________________________________
+ * |                |               |
+ * |                |   BigO        |
+ * |     Best       |   O(1)        |
+ * |     Average    |   O(log(n))   |
+ * |     Worst      |   O(log(n))   |
+ * |________________|_______________|
+ *
+ * Space Complexity.
+ *  _______________________________
+ * |                |              |
+ * |                |   BigO       |
+ * |    Loop        |   O(1)       |
+ * |    Recursive   |   O(log(n))  |
+ * |________________|______________|
  *
  */
 
