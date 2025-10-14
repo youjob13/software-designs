@@ -42,7 +42,7 @@
   "author": "Danila Rodionov",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^22.10.5",
-    "typescript": "^5.7.3"
+    "@types/node": "^20.19.20",
+    "typescript": "^5.9.3"
   }
 }
